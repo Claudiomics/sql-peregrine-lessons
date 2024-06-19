@@ -21,7 +21,7 @@ Challenge 4:
 
 <img width="873" alt="Screenshot 2024-06-19 at 15 52 13" src="https://github.com/Claudiomics/sql-peregrine-lessons/assets/149532217/7e037dca-963a-41f9-b0e9-e7e3455ec7a7">
 
-<img width="705" alt="Screenshot 2024-06-19 at 15 55 37" src="https://github.com/Claudiomics/sql-peregrine-lessons/assets/149532217/6768608d-6b89-4d80-bcda-5b1435db6fa4">
+<img width="733" alt="Screenshot 2024-06-19 at 16 01 35" src="https://github.com/Claudiomics/sql-peregrine-lessons/assets/149532217/bba47359-f79a-43fb-ae48-e1fc8699e77b">
 
 Challenge 5:
 
