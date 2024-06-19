@@ -2,8 +2,10 @@
 
 This file inlcudes the Questions and Answers from the Lessons provided by Peregrine, using PgAdmin4 and PostgreSQL.
 
-### [Exercises](#exercises)
-### [Review Exercises](#review-exercises)
+Table of Contents:
+
+1. [Exercises](#exercises)
+2. [Review Exercises](#review-exercises)
 
 ## Exercises
 
