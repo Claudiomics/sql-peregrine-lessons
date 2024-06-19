@@ -1,4 +1,4 @@
-# Peregrine Lessons
+# Peregrine Lesson 1 - The Basics
 
 This file inlcudes the Questions and Answers from the Lessons provided by Peregrine, using PgAdmin4 and PostgreSQL.
 
