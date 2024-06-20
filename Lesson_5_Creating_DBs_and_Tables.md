@@ -8,6 +8,12 @@ Table of Contents
 4. [CREATE](#create)
 5. [INSERT](#insert)
 6. [UPDATE](#update)
+7. [DELETE](#delete)
+8. [ALTER](#alter)
+      1. [Adding Columns](adding-columns)
+      2. [Drop](#drop)
+9. [Check Contraints](#check-constraints)
+10. [Challenge](#challenge)
 
 ## Data Types
 
@@ -134,4 +140,123 @@ VALUES
 <img width="542" alt="Screenshot 2024-06-20 at 13 45 40" src="https://github.com/Claudiomics/sql-peregrine-lessons/assets/149532217/fc53d02e-913a-46b3-9074-07dae005c6ea">
 
 ## UPDATE
+
+Syntax:
+UPDATE table
+SET column1 = value1, 
+    column2 = value2
+WHERE condition;
+
+## DELETE
+
+Removes rows from a table.
+
+DELETE FROM table
+WHERE row_id = 1;
+
+Deleting rows based on their presence in another table:
+
+DELETE FROM tableA
+USING tableB
+WHERE tableA.id = tableB.id
+
+Deleting all rows from the table:
+
+DELETE FROM table;
+
+## ALTER
+
+Changes to a table structure, such as:
+
+- Adding, dropping, renaming a column
+- Changing a data type
+- Set DEFAULT values for a column
+- Add CHECK constraints
+- Rename table
+
+Syntax:
+
+ALTER TABLE table_name action;
+
+### Adding Columns 
+
+ALTER TABLE table_name
+ADD COLUMN new_col TYPE;
+
+### Drop
+
+ALTER TABLE table_name 
+DROP COLUMN col_name;
+
+## Check Constraints 
+
+Alter constraints:
+
+ALTER TABLE table_name 
+ALTER COLUMN col_name
+ADD CONSTRAINT constraint_name;
+
+Check constraints:
+
+CREATE TABLE example(
+  ex_id SERIAL PRIMARY KEY,
+  age SMALLINT CHECK(age > 21), 
+  parent_age SMALLINT CHECK(parent_age > age));
+
+## Challenge
+Present a 2 minute presentation on how you completed the following: You have 1h.
+
+Create a new database called "School" this database should have two tables: teachers and students.
+The students table should have columns for student_id, first_name,last_name, homeroom_number, phone,email, and graduation year.
+
+The teachers table should have columns for teacher_id, first_name, last_name, homeroom_number, department, email, and phone.
+The constraints are mostly up to you, but your table constraints do have to consider the following:
+ We must have a phone number to contact students in case of an emergency.
+ We must have ids as the primary key of the tables
+Phone numbers and emails must be unique to the individual.
+Once you've made the tables, insert a student named Mark Watney (student_id=1) who has a phone number of 777-555-1234 and doesn't have an email. He graduates in 2035 and has 5 as a homeroom number.
+Then insert a teacher names Jonas Salk (teacher_id = 1) who as a homeroom number of 5 and is from the Biology department. His contact info is: jsalk@school.org and a phone number of 777-555-4321.
+Keep in mind that these insert tasks may affect your constraints!
+
+CREATE TABLES WITH CONSTRAINTS:
+
+CREATE TABLE students(
+  student_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL
+  last_name VARCHAR(50) NOT NULL
+  homeroom_number INTEGER NOT NULL,
+  phone VARCHAR(15) UNIQUE NOT NULL,
+  email VARCHAR(200) UNIQUE,
+  graduation year INTEGER
+  );
+  
+CREATE TABLE teachers(
+    teacher_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    homeroom_number INTEGER NOT NULL,
+    department VARCHAR(100) NOT NULL,
+    email VARCHAR(200) UNIQUE,
+    phone VARCHAR(15) UNIQUE NOT NULL
+);
+
+Add two people: 
+
+Mark Watney (student_id=1) who has a phone number of 777-555-1234 and doesn't have an email. He graduates in 2035 and has 5 as a homeroom number.
+
+INSERT INTO student(student_id, first_name,last_name, homeroom_number, phone,email, graduation year)
+VALUES (1, 'Mark', 'Watney', 5, '777-555-1234', null, 2035);
+
+Jonas Salk (teacher_id = 1) who as a homeroom number of 5 and is from the Biology department. His contact info is: jsalk@school.org and a phone number of 777-555-4321.
+
+INSERT INTO teacher(teacher_id, first_name, last_name, homeroom_number, department, email, phone)
+VALUES (1, 'Jonas', 'Salk', 5, 'Biology', 'jsalk@school.org', '777-555-4321');
+
+Verify information has been added correctly:
+
+SELECT * FROM students;
+SELECT * FROM teachers;
+  
+
+
 
