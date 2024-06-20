@@ -32,7 +32,16 @@ CREATE TABLE players(
   age SMALLINT NOT NULL
   );
 
-e.g.2. 
+e.g.2. Create a new database and run the following code:
+
+CREATE TABLE account(
+  user_id SERIAL PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  email VARCHAR(250) UNIQUE NOT NULL,
+  created_on TIMESTAMP NOT NULL,
+  last_login TIMESTAMP
+);
 
 ## INSERT
 
