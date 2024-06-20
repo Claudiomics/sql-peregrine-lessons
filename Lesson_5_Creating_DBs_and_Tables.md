@@ -24,7 +24,34 @@ Special types such as network address and geometric data
 
 ## Primary and Foreign Keys
 
+A primary key is a column or group of columns used to identify a row uniquely in a table.
+
+Primary and foreign keys typically make good column choices when joining two or more tables together.
+
+When creating tables and defining columns, contraints can be used to define a column as a primary key, or attaching a foreign key relationship to another table.
+
+<img width="265" alt="Screenshot 2024-06-20 at 14 33 51" src="https://github.com/Claudiomics/sql-peregrine-lessons/assets/149532217/3a6f5c1a-e126-4ccf-a46f-3ff7046c75de">
+
 ## Constraints
+
+These are the rules enforced on data columns in a table, and prevent invalid data from being entered in the database. 
+
+This ensures the accuracy and reliability of the data in the database, and are divided into two main categories:
+
+1. Column Constraints
+2. Table Constraints
+
+A few common constraints include:
+
+NOT NULL - Ensures column has no nulls.
+UNIQUE - Ensures all values in a column are different.
+
+PRIMARY Key - Uniquely identifies each row/record in a database table.
+FOREIGN Key - Constrains data based on columns in other tables.
+
+CHECK Constraint - ensures all values in a column satisfy certain conditions.
+
+EXCLUSION Constraint - if any 2 rows are compared on the specified column or expression using the specified operator, not all of these comparisons will return TRUE.
 
 ## CREATE
 
