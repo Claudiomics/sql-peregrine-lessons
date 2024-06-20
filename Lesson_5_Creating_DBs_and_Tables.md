@@ -9,7 +9,18 @@ Table of Contents
 5. [INSERT](#insert)
 6. [UPDATE](#update)
 
-## Primary Key
+## Data Types
+
+Bool - T/F
+Character - char, varchar, text
+Numeric - int, float
+Temporal - date, time, timestamp, interval
+
+UUID - Universally unique identifyer
+Array - Stores an array of strings, numbers etc.
+JSON - file type
+Hstore key-value pair
+Special types such as network address and geometric data
 
 ## Primary and Foreign Keys
 
